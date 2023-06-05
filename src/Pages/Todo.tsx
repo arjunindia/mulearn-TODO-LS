@@ -61,8 +61,15 @@ export default function Todo() {
     }
 
     return (
-        <>
+        <><div className="header">
+
         <h1>Todo</h1>
+        
+        <button className="logout" onClick={() => {
+            localStorage.removeItem("user");
+            setLocation("/login");
+        }}>Logout</button>
+        </div>
         <form className="todo__input__form" onSubmit={handleSubmit}>
         <Checkbox checkRef={checkRef} />
         <input type="text" ref={inputRef} className="todo__input" required />
