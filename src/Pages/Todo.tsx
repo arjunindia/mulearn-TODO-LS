@@ -1,5 +1,5 @@
 import {useEffect,useState,useRef,InputHTMLAttributes} from 'react';
-import {useLocation,Link} from "wouter";
+import {useLocation} from "wouter";
 import {v4 as uuid,} from "uuid";
 export default function Todo() {
     const todoVar = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")!) : [];
